@@ -70,9 +70,9 @@ dstFromNormalizedImg = cv2.fastNlMeansDenoisingColored(result_norm, None, 10, 10
 aadharcardNo =0
 dateOfBirth = 0
 hImage,wImage,_ = img.shape
-config = r'--oem 3 --psm 6 outputbase digits'
+config = r'--oem 3 --psm 6'
 boxes = pytesseract.image_to_data(dstFromNormalizedImg,config=config)
-# print(boxes)
+print(boxes)
 for x,b in enumerate(boxes.splitlines()):
     if x!= 0:
         b = b.split()
