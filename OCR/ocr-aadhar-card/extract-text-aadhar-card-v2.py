@@ -7,7 +7,7 @@ import AadharCard
 
 # extract image and convert to grayscale for better readability
 
-img = cv2.imread('./SampleImage/sample-4.jpg')
+img = cv2.imread('./SampleImage/sample-9.jpg')
 img = cv2.resize(img,None,fx=2,fy=2,interpolation=cv2.INTER_CUBIC)
 
 img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
