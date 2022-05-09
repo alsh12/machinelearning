@@ -14,6 +14,7 @@ def ReadDataAadhar(text):
     nameLine = []
     dobLine = []
     aadharLine = []
+    genderLine =[]
     text0 =[]
     text1 =[]
     text2 =[]
@@ -66,8 +67,11 @@ def ReadDataAadhar(text):
 
     # Gender
     try:
-        sex = str(re.findall(r"male|female", genderLine.lower())).replace("[","").replace("'", "").replace("]", "")
-        print("Gender: ",sex)
+        if len(genderLine)>0:
+            sex = str(re.findall(r"male|female", genderLine.lower())).replace("[","").replace("'", "").replace("]", "")
+            print("Gender: ",sex)
+        else:
+            print("Gender not found")
 
     except Exception as e:
         print('Caught exception: ', e)
