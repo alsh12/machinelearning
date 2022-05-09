@@ -7,6 +7,7 @@ import AadharCard
 
 # extract image and convert to grayscale for better readability
 
+
 img = cv2.imread('./SampleImage/sample-9.jpg')
 img = cv2.resize(img,None,fx=2,fy=2,interpolation=cv2.INTER_CUBIC)
 
@@ -24,8 +25,7 @@ img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 
 # pytesseract cmd
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 # read the text from image
 text = pytesseract.image_to_string(img,lang='eng')
 
