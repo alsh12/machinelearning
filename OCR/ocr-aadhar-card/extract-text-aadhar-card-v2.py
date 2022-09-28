@@ -8,7 +8,7 @@ import AadharCardV2 as aadharCard
 
 
 aadhar = aadharCard.AadharData()
-print(aadhar.InfoExtracter('./SampleImage/sample-9-front.jpg','./SampleImage/sample-9-back.jpg'))
+print(aadhar.InfoExtracter('./SampleImage/sample-7.jpg','./SampleImage/sample-9-back.jpg'))
 #
 # # extract image and convert to grayscale for better readability
 #

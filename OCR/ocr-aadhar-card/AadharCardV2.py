@@ -108,11 +108,11 @@ class AadharData:
             frontPageImageToExtract = cv2.resize(frontPageImageToExtract, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC)
             frontPageImageToExtract = cv2.cvtColor(frontPageImageToExtract, cv2.COLOR_BGR2GRAY)
 
-            #Check image blur or not
-            var = cv2.Laplacian(frontPageImageToExtract, cv2.CV_64F).var()
-            print("Front image laplacian:",var)
-            if(var < 40):
-                return "Image is too blury. Provide another front image."
+            # #Check image blur or not
+            # var = cv2.Laplacian(frontPageImageToExtract, cv2.CV_64F).var()
+            # print("Front image laplacian:",var)
+            # if(var < 40):
+            #     return "Image is too blury. Provide another front image."
 
             # cv2.imshow("Front Page: ",frontPageImageToExtract)
             # cv2.waitKey(0)
